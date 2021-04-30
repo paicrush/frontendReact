@@ -1,0 +1,104 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "productId": "P001",
+      "productName": "สลัดผัก",
+      "unitPrice": "120",
+      "thumbnail": "/images/product/1.jpg"
+    },
+    {
+      "id": 2,
+      "productId": "P002",
+      "productName": "ไก่ทอด 5 ดาว",
+      "unitPrice": "700",
+      "thumbnail": "/images/product/2.jpg"
+    },
+    {
+      "id": 3,
+      "productId": "P003",
+      "productName": "บิงซู",
+      "unitPrice": "150",
+      "thumbnail": "/images/product/3.jpg"
+    },
+    {
+      "productName": "เฟรนฟราย",
+      "unitPrice": "150",
+      "thumbnail": "/images/product/4.jpg",
+      "id": 4
+    },
+    {
+      "productName": "เค้ก 3 ชั้น",
+      "unitPrice": "180",
+      "thumbnail": "/images/product/5.jpg",
+      "id": 5
+    },
+    {
+      "productName": "กาแฟ เฮลตี้ฟู้ด",
+      "unitPrice": "120",
+      "thumbnail": "/images/product/6.jpg",
+      "id": 6
+    },
+    {
+      "productName": "กาแฟ เฮลตี้ฟู้ด",
+      "unitPrice": "250",
+      "thumbnail": "/images/product/6.jpg",
+      "id": 7
+    }
+  ],
+  "orders": [
+    {
+      "orderedDate": "2021-04-12T06:47:24.434Z",
+      "totalPrice": 140,
+      "orders": [
+        {
+          "product": {
+            "id": 4,
+            "productId": "P004",
+            "productName": "เฟรนฟราย",
+            "unitPrice": "140",
+            "thumbnail": "/images/product/4.jpg"
+          },
+          "quantity": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "orderedDate": "2021-04-24T02:31:32.377Z",
+      "totalPrice": 330,
+      "orders": [
+        {
+          "product": {
+            "productName": "เฟรนฟราย",
+            "unitPrice": "120",
+            "thumbnail": "/images/product/4.jpg",
+            "id": 4
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": 3,
+            "productId": "P003",
+            "productName": "บิงซู",
+            "unitPrice": "120",
+            "thumbnail": "/images/product/3.jpg"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": 2,
+            "productId": "P002",
+            "productName": "ไก่ทอด",
+            "unitPrice": "90",
+            "thumbnail": "/images/product/2.jpg"
+          },
+          "quantity": 1
+        }
+      ],
+      "id": 2
+    }
+  ]
+}
