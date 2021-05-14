@@ -58,7 +58,7 @@ class Order extends Component {
                     
                     </div>
                 </div>
-				<Footer company ="jakkrapong" email ="dcdc07411@gmail.com"/>
+				<Footer company ="Pizza Day" email ="dcdc07411@gmail.com"/>
 			</div>
 		);
 	}

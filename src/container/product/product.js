@@ -39,7 +39,7 @@ class Product extends Component {
 							<h1>สินค้า</h1>
 						</div>
 						<div className="col-6">
-							<button className="btn btn-success title float-right" onClick={() => this.props.history.push('product/add')}>เพิ่ม</button>
+							<button className="btn btn-warning title float-right" onClick={() => this.props.history.push('product/add')}>เพิ่ม</button>
 						</div>
 					</div>
 					{this.props.product && Array.isArray(this.props.product)&&(<ProductList product={this.props.product} 
@@ -48,7 +48,7 @@ class Product extends Component {
 					/>)}
 					
 				</div>
-                 <Footer company ="jakkrapong" email ="dcdc07411@gmail.com"/>
+                 <Footer company ="Pizza Day" email ="dcdc07411@gmail.com"/>
 
             </div>
         )

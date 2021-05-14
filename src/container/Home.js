@@ -23,7 +23,7 @@ class Home extends Component{
       <div>
         <Header/>
         <Monitor product={this.props.product}/>
-        <Footer company ="jakkrapong" email ="dcdc07411@gmail.com"/>
+        <Footer company ="Pizza Day" email ="dcdc07411@gmail.com"/>
       </div>
       );
   }
