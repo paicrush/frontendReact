@@ -9,7 +9,10 @@ const About = () => {
                 <div className="container col-md-8">
                     <h2>
                     <p className="title text-center mt-4 mb43">
-                        กินอะไร กินอะไร กินอะไร ไปกิน Pizza Day
+                    Pizza Day ใช้วัตถุดิบที่สดใหม่และส่งเสริมสุขภาพเท่านั้น จึงรับประกันได้ว่าพิซซ่านั้นมีความกรอบและการผสมผสานรสชาติได้อย่างลงตัว
+                    </p>
+                    <p className="title text-center mt-4 mb43">
+                    โดยวัตถุดิบหลักที่สำคัญ คือชีสคุณภาพดีเยี่ยมที่ผลิตจากนมสด 100%
                     </p>
                     </h2>
                 </div>
