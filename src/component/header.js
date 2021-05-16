@@ -28,7 +28,7 @@ class Header extends Component{
         }
         
         return (
-            <div className="container-fulid headerbgc" >
+            <div className="container-fulid bg-success" >
                 <div className="row">
                     <div className="col-md-8 text-left mt-2">
                         <h1 className="text-light ml-2"><img style={style} src ="http://www.digithaigroup.com/wp-engine/wp-content/uploads/2016/10/pizzadaybkk.png" alt="not" /> Pizza Day </h1>

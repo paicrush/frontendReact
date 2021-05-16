@@ -20,16 +20,21 @@ class Calculator extends Component{
         }
     }
     render(){
+        const style ={
+            height:50,
+        }
         const {totalPrice,orders}=this.props;
         return(
             <div>
+                <h1 className="text-success"><img style={style} src ="http://www.digithaigroup.com/wp-engine/wp-content/uploads/2016/10/pizzadaybkk.png" alt="not" />     แคชเชียร์</h1>
+                <hr/>
                 <h1 className="text-right">{totalPrice}</h1>
                 <hr/>
                 <ul className="list-unstyled">
                     {this.showOrder(orders)}
                 </ul>
                 <hr/>
-                <button className="btn btn-block btn-primary title" onClick={() => this.props.onConfirmOrder()}>ยืนยัน</button>
+                <button className="btn btn-block btn-danger title" onClick={() => this.props.onConfirmOrder()}>ยืนยัน</button>
                 <button  className="btn btn-block btn-secondary title" onClick={() => this.props.onCancelOrder()}>ยกเลิก</button>
             </div>
         );

@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = (props) => {
     const {company,email}=props;
-    return <div className ="container-fulid footerbgc">
+    return <div className ="container-fulid bg-success">
             <hr/>
             <div className='text-center title text-uppercase'>
                 <small>
