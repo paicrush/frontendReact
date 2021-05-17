@@ -3,6 +3,9 @@ import Header from "../../component/header";
 import Footer from "../../component/footer";
 import { connect } from "react-redux";
 import { orderFetch, orderDelete } from "../../actions";
+import { Helmet } from 'react-helmet'
+
+const TITLE = 'Order';
 
 class Order extends Component {
 	constructor(props) {
@@ -120,6 +123,9 @@ class Order extends Component {
         }
 		return (
 			<div>
+                <Helmet>
+                    <title>{ TITLE }</title>
+                </Helmet>
 				<Header />
                 <div className="container-fluid">
                     <h1>รายการสั่งซื้อ</h1>

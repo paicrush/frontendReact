@@ -1,13 +1,21 @@
 import React from "react";
 import Header from "../component/header";
 import Footer from "../component/footer";
+import { Helmet } from 'react-helmet'
+
+const TITLE = 'About Us'
 
 const About = () => {
     const style ={
         height:300,
     }
+
+
     return (
         <div>
+            <Helmet>
+                <title>{ TITLE }</title>
+            </Helmet>
             <Header />
                 <div className="container col-md-8">
                 <img className="rounded mx-auto d-block" style={style} src ="http://www.digithaigroup.com/wp-engine/wp-content/uploads/2016/10/pizzadaybkk.png" alt="not" />

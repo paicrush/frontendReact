@@ -5,6 +5,8 @@ import ProductList from "../../component/productList";
 import { withRouter} from "react-router-dom"
 import {connect} from "react-redux";
 import { productFetch,productDelete } from "../../actions";
+import { Helmet } from 'react-helmet';
+const TITLE = 'Manage';
 
 class Product extends Component {
     
@@ -35,6 +37,9 @@ class Product extends Component {
         }
         return(
             <div>
+				<Helmet>
+                	<title>{ TITLE }</title>
+            	</Helmet>
                  <Header/>
                  <div className="container-fluid ">
 					<div className="row">
