@@ -9,7 +9,9 @@ class Order extends Component {
 		super(props);
         this.state={
             total:0,
-            switch:false
+            switch:false,
+            today:0,
+            yeserday:100
         }
 	}
 
@@ -17,24 +19,25 @@ class Order extends Component {
         console.log("componentDidMount");
 		this.props.orderFetch();
         let totalall = 0;
+        let totalday = 0;
+        let totalyeserday = 0;
+        const day = new Date();
+        let yes= ( d => new Date(d.setDate(d.getDate()-1)) )(new Date);
         for (let index = 0; index < this.props.orders.length; index++) {
             totalall += this.props.orders[index].totalPrice;
-            
+            const date = new Date(this.props.orders[index].orderedDate);
+            console.log(date.toLocaleDateString());
+            if (date.toLocaleDateString() == day.toLocaleDateString()) {
+                totalday += this.props.orders[index].totalPrice;
+            }
+            if (date.toLocaleDateString() == yes.toLocaleDateString()) {
+                totalyeserday += this.props.orders[index].totalPrice;
+            }
         }
         this.setState({total: totalall });
+        this.setState({today: totalday });
+        this.setState({yeserday: totalyeserday });
     }
-    settotal(){
-      
-        let totalall = 0;
-        for (let index = 0; index < this.props.orders.length; index++) {
-            totalall += this.props.orders[index].totalPrice;
-            
-        }
-        if (this.state.switch == true) {
-            this.setState({total: totalall });
-            this.setState({switch: false });
-    }
-        }
         componentDidUpdate(){
             this.props.orderFetch();
         }
@@ -44,13 +47,24 @@ class Order extends Component {
     componentWillReceiveProps(nextProps){
         if (this.props.orders != nextProps.orders) {
             let totalall = 0;
+            let totalday = 0;
+            let totalyeserday = 0;
+            const day = new Date();
+            let yes= ( d => new Date(d.setDate(d.getDate()-1)) )(new Date);
             for (let index = 0; index < this.props.orders.length; index++) {
                 totalall += this.props.orders[index].totalPrice;
-                
+                const date = new Date(this.props.orders[index].orderedDate);
+                if (date.toLocaleDateString() == day.toLocaleDateString()) {
+                    totalday += this.props.orders[index].totalPrice;
+                }
+                if (date.toLocaleDateString() == yes.toLocaleDateString()) {
+                    totalyeserday += this.props.orders[index].totalPrice;
+                }
             }
             this.setState({total: totalall });
+            this.setState({today: totalday });
+            this.setState({yeserday: totalyeserday });
         }
-       
     }
     
     
@@ -60,7 +74,7 @@ class Order extends Component {
     }
         
     
-    
+     
     
     showOrders() {
         return this.props.orders && this.props.orders.map(order => {
@@ -100,7 +114,10 @@ class Order extends Component {
     }
 
 	render() {
-        let {total} = this.state;
+        let {total,today,yeserday} = this.state;
+        const style ={
+            height:100,
+        }
 		return (
 			<div>
 				<Header />
@@ -111,9 +128,28 @@ class Order extends Component {
 					this.showOrders()
                     )}
                     </div>
-                    <div className="row">
-                     <h1>ยอดรวมทั้งหมด : {total}</h1>
+                    
+                        <br/>
+                        <br/>
+                    <hr/>
+                    <div className="row ">
+
+                        <div className="col">
+                        <br/>
+                        <br/>
+                        <h2 className="text-secondary">ยอดขายรวมทั้งหมด : {total}</h2>
+                        </div>
+                        <div className="col">
+                        <h1 className="text-success text-center "><img style={style} src ="http://www.digithaigroup.com/wp-engine/wp-content/uploads/2016/10/pizzadaybkk.png" alt="not" />   ยอดขายวันนี้ : {today}</h1>
+                        
+                        </div>
+                        <div className="col">
+                        <br/>
+                        <br/>
+                        <h3 className="text-right text-secondary">ยอดขายเมื่อวาน : {yeserday}</h3>
+                        </div>
                     </div>
+                    <hr/>
                 </div>
 				<Footer company ="Pizza Day" email ="dcdc07411@gmail.com"/>
 			</div>

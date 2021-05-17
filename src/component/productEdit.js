@@ -17,13 +17,16 @@ class ProductEdit extends Component {
 	render() {
 		const {formValues, match, productCreate, productUpdate, product } = this.props
 		console.log(product);
+		const style ={
+			height:100,
+		}
 		return (
 			<div>
 				<Header />
 				<div className="container col-md-5">
 					{match.path.indexOf("add") > 0 && (
 						<div>
-							<h2>เพิ่มสินค้า</h2>
+							<h1 className="text-success "><img style={style} src ="http://www.digithaigroup.com/wp-engine/wp-content/uploads/2016/10/pizzadaybkk.png" alt="not" />    เพิ่มรายการสินค้า</h1>
 							{product.saved && <div className="alert alert-info title " role="alert">
 								{product.msg}
 							</div>}
@@ -32,7 +35,7 @@ class ProductEdit extends Component {
 					)}
 					{match.path.indexOf("edit") > 0 &&  (
 						<div>
-							<h2>แก้ไขสินค้า</h2>
+							<h1 className="text-success "><img style={style} src ="http://www.digithaigroup.com/wp-engine/wp-content/uploads/2016/10/pizzadaybkk.png" alt="not" />    แก้ไขรายการสินค้า</h1>
 							{product.saved && <div className="alert alert-warning title " role="alert">
 								{product.msg}
 							</div>}

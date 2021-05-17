@@ -24,7 +24,7 @@ class ProductForm extends Component {
 					บันทึก
 				</button>
 				</form>
-				
+				<br/>
 			</div>
 		);
 	}
