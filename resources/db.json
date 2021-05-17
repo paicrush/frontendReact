@@ -3,60 +3,78 @@
     {
       "id": 1,
       "productId": "P001",
-      "productName": "สลัดผัก",
-      "unitPrice": "120",
+      "productName": "พิซซ่าหน้าเบค่อนชีส",
+      "unitPrice": "199",
       "thumbnail": "/images/product/1.jpg"
     },
     {
       "id": 2,
       "productId": "P002",
-      "productName": "ไก่ทอด 5 ดาว",
-      "unitPrice": "700",
+      "productName": "ไก่ทอดบาร์บีคิว",
+      "unitPrice": "129",
       "thumbnail": "/images/product/2.jpg"
     },
     {
       "id": 3,
       "productId": "P003",
       "productName": "บิงซู",
-      "unitPrice": "150",
+      "unitPrice": "79",
       "thumbnail": "/images/product/3.jpg"
     },
     {
       "productName": "เฟรนฟราย",
-      "unitPrice": "150",
+      "unitPrice": "69",
       "thumbnail": "/images/product/4.jpg",
       "id": 4
     },
     {
-      "productName": "เค้ก 3 ชั้น",
-      "unitPrice": "180",
-      "thumbnail": "/images/product/5.jpg",
+      "productName": "พิซซ่าหน้าพอร์คพาเหรด",
+      "unitPrice": "179",
+      "thumbnail": "/images/product/8.jpg",
       "id": 5
     },
     {
-      "productName": "กาแฟ เฮลตี้ฟู้ด",
-      "unitPrice": "120",
-      "thumbnail": "/images/product/6.jpg",
+      "productName": "พิซซ่าหน้าซีฟู้ด",
+      "unitPrice": "199",
+      "thumbnail": "/images/product/9.jpg",
       "id": 6
     },
     {
-      "productName": "กาแฟ เฮลตี้ฟู้ด",
-      "unitPrice": "250",
-      "thumbnail": "/images/product/6.jpg",
+      "productName": "พิซซ่าหน้าชิกเก้น ดูโอ",
+      "unitPrice": "149",
+      "thumbnail": "/images/product/10.jpg",
       "id": 7
+    },
+    {
+      "productName": "พิซซ่าหน้าผักโขม",
+      "unitPrice": "149",
+      "thumbnail": "/images/product/11.jpg",
+      "id": 8
+    },
+    {
+      "productName": "พิซซ่าหน้ากะเพราไก่",
+      "unitPrice": "169",
+      "thumbnail": "/images/product/12.jpg",
+      "id": 9
+    },
+    {
+      "productName": "พิซซ่าหน้าเลิฟเวอร์ สุพรีม",
+      "unitPrice": "159",
+      "thumbnail": "/images/product/14.jpg",
+      "id": 10
     }
   ],
   "orders": [
     {
       "orderedDate": "2021-04-12T06:47:24.434Z",
-      "totalPrice": 140,
+      "totalPrice": 69,
       "orders": [
         {
           "product": {
             "id": 4,
             "productId": "P004",
             "productName": "เฟรนฟราย",
-            "unitPrice": "140",
+            "unitPrice": "69",
             "thumbnail": "/images/product/4.jpg"
           },
           "quantity": 1
@@ -66,12 +84,12 @@
     },
     {
       "orderedDate": "2021-04-24T02:31:32.377Z",
-      "totalPrice": 330,
+      "totalPrice": 277,
       "orders": [
         {
           "product": {
             "productName": "เฟรนฟราย",
-            "unitPrice": "120",
+            "unitPrice": "69",
             "thumbnail": "/images/product/4.jpg",
             "id": 4
           },
@@ -82,7 +100,7 @@
             "id": 3,
             "productId": "P003",
             "productName": "บิงซู",
-            "unitPrice": "120",
+            "unitPrice": "79",
             "thumbnail": "/images/product/3.jpg"
           },
           "quantity": 1
@@ -91,8 +109,8 @@
           "product": {
             "id": 2,
             "productId": "P002",
-            "productName": "ไก่ทอด",
-            "unitPrice": "90",
+            "productName": "ไก่ทอดบาร์บีคิว",
+            "unitPrice": "129",
             "thumbnail": "/images/product/2.jpg"
           },
           "quantity": 1
