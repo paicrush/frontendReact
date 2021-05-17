@@ -55,7 +55,7 @@ class Monitor extends Component{
     render(){
         return (
             <div className="container-fluid ">
-                 {this.state.confirm && 
+                {this.state.confirm && 
                 <div className="alert alert-secondary title text-right" role="alert">
                     {this.state.msg}
                 </div>}

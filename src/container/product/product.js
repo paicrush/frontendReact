@@ -6,7 +6,8 @@ import { withRouter} from "react-router-dom"
 import {connect} from "react-redux";
 import { productFetch,productDelete } from "../../actions";
 import { Helmet } from 'react-helmet';
-const TITLE = 'Manage';
+
+const TITLE = 'Product';
 
 class Product extends Component {
     
@@ -58,7 +59,7 @@ class Product extends Component {
 					/>)}
 					
 				</div>
-                 <Footer company ="Pizza Day" email ="dcdc07411@gmail.com"/>
+                <Footer company ="Pizza Day" email ="dcdc07411@gmail.com"/>
 
             </div>
         )

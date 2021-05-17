@@ -77,7 +77,6 @@ class Order extends Component {
     }
         
     
-     
     
     showOrders() {
         return this.props.orders && this.props.orders.map(order => {
@@ -88,18 +87,17 @@ class Order extends Component {
             
             return (
                 <div key={order._id} className="col-md-3">
-                    <hr />
-                    <div className="row">
-                        <div className="col">
-                        <h1 className="text-success title"><img style={style} src ="http://www.digithaigroup.com/wp-engine/wp-content/uploads/2016/10/pizzadaybkk.png" alt="not" />    pizzaday</h1>
-                        </div>
-                        <div className="col">
-                        <p className="text-right">
-                        <button className="btn btn-danger btn-sm title" onClick={() => this.delOrder(order)}>X</button>
-                    </p>
-                        </div>
-                    </div>                
-                    
+                    <div className="col-md-12 rounded" style={{backgroundColor:'#D5F5E3',margin:10 +'px',border:3+'px'+' solid #58D68D'}}>
+                        <div className="row">
+                            <div className="col">
+                            <h1 className="text-success title" style={{margin:10 +'px'}}><img style={style} src ="http://www.digithaigroup.com/wp-engine/wp-content/uploads/2016/10/pizzadaybkk.png" alt="not" />    pizzaday</h1>
+                            </div>
+                            <div className="col">
+                            <p className="text-right">
+                                <button className="btn btn-danger btn-sm title" style={{marginTop:10 +'px'}} onClick={() => this.delOrder(order)}>X</button>
+                            </p>
+                            </div>
+                        </div>             
                     <h5>
                         วันที่ {date.toLocaleDateString() + ' ' + date.toLocaleTimeString()} 
                     </h5>
@@ -110,7 +108,8 @@ class Order extends Component {
                     )}
                     </ul>
                     
-                    <p className="title">ยอดรวม {order.totalPrice}</p>
+                    <b className="title" style={{color:'green'}}>ยอดรวม {order.totalPrice} THB</b>
+                    </div>  
                 </div>
             )
         })
@@ -129,7 +128,7 @@ class Order extends Component {
 				<Header />
                 <div className="container-fluid">
                     <h1>รายการสั่งซื้อ</h1>
-                    <div className="row">
+                    <div className="row" style={{margin: 1 + 'em'}}>
                     {this.props.orders && Array.isArray(this.props.orders)&&(
 					this.showOrders()
                     )}
@@ -138,21 +137,21 @@ class Order extends Component {
                         <br/>
                         <br/>
                     <hr/>
-                    <div className="row ">
+                    <div className="row">
 
                         <div className="col">
                         <br/>
                         <br/>
-                        <h2 className="text-secondary">ยอดขายรวมทั้งหมด : {total}</h2>
+                        <h2 className="text-secondary">ยอดขายรวมทั้งหมด : {total} THB</h2>
                         </div>
                         <div className="col">
-                        <h1 className="text-success text-center "><img style={style} src ="http://www.digithaigroup.com/wp-engine/wp-content/uploads/2016/10/pizzadaybkk.png" alt="not" />   ยอดขายวันนี้ : {today}</h1>
+                        <h1 className="text-success text-center "><img style={style} src ="http://www.digithaigroup.com/wp-engine/wp-content/uploads/2016/10/pizzadaybkk.png" alt="not" />   ยอดขายวันนี้ : {today} THB</h1>
                         
                         </div>
                         <div className="col">
                         <br/>
                         <br/>
-                        <h3 className="text-right text-secondary">ยอดขายเมื่อวาน : {yeserday}</h3>
+                        <h3 className="text-right text-secondary">ยอดขายเมื่อวาน : {yeserday} THB</h3>
                         </div>
                     </div>
                     <hr/>

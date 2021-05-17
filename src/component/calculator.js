@@ -11,12 +11,30 @@ class Calculator extends Component{
         }else{
             return orders.map(order =>{
                 return (
-                    <li className="text-right text-success title">
-                        {order.product.productName} x {order.quantity} ={order.quantity * order.product.unitPrice}
-                        <button className="btn btn-light btn-sm" onClick={() =>this.props.delOrder(order.product)} >x</button>
-                    </li>
+                    <div className="row text-success title">
+                        <div className="col-6">
+                        {order.product.productName}
+                        </div>
+                        <div className="col-1 text-secondary float-center">
+                            x
+                        </div>
+                        <div className="col-1">
+                            <p className="float-right">{order.quantity}</p>
+                        </div>
+                        <div className="col-2 justify-content-right">
+                            <p className="float-right">{order.quantity * order.product.unitPrice}</p>
+                        </div>
+                        <div className="col-2 justify-content-right">
+                            <button className="btn btn-danger float-right btn-sm" onClick={() =>this.props.delOrder(order.product)} >x</button>
+                        </div>
+                    </div>
+                    // <li className="text-right text-success title">
+                    //     {order.product.productName} x {order.quantity} = {order.quantity * order.product.unitPrice}
+                    //     <button className="btn danger btn-light btn-sm" onClick={() =>this.props.delOrder(order.product)} >x</button>
+                    // </li>
                 )
             })
+            
         }
     }
     render(){
@@ -28,7 +46,7 @@ class Calculator extends Component{
             <div>
                 <h1 className="text-success"><img style={style} src ="http://www.digithaigroup.com/wp-engine/wp-content/uploads/2016/10/pizzadaybkk.png" alt="not" />     แคชเชียร์</h1>
                 <hr/>
-                <h1 className="text-right">{totalPrice}</h1>
+                <h1 className="text-right text-success">{totalPrice} THB</h1>
                 <hr/>
                 <ul className="list-unstyled">
                     {this.showOrder(orders)}
