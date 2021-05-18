@@ -22,6 +22,7 @@ class Order extends Component {
             show : true
 
         }
+        this.showall = this.showall.bind(this);
 	}
 
 	componentDidMount() {
@@ -90,6 +91,11 @@ class Order extends Component {
       selecthand=date=>{
         this.setState({check : date });
         this.setState({show : false });
+      }
+      showall(){
+          this.setState({show : true });
+          this.setState({check : new Date()});
+          this.setState({startdate : new Date()});
       }
      
     showOrders() {
@@ -177,7 +183,10 @@ class Order extends Component {
                 <div className="row">
                 <div className="col"><h1>รายการสั่งซื้อ</h1></div>
                     <div className="col">
-                    <h2 className="title text-right"> ค้นหาด้วยวันที่ : <DatePicker selected={startdate} onSelect={this.selecthand} dateFormat="M/d/yyyy" onChange={this.handleChange}/></h2>               
+                    
+                    <h2 className="title text-right">{this.state.show == false && (
+                        <button type="button" class="btn btn-outline-success" onClick={this.showall}>แสดงออเดอร์ทั้งหมด</button>
+                    )}  ค้นหาด้วยวันที่ : <DatePicker selected={startdate} onSelect={this.selecthand} dateFormat="M/d/yyyy" onChange={this.handleChange}/></h2>               
                         </div>
                 </div>
                     <div className="row" style={{margin: 1 + 'em'}}>
