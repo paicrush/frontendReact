@@ -18,7 +18,9 @@ class Product extends Component {
 		this.editProduct = this.editProduct.bind(this);
     }
 	componentDidUpdate() {
-		this.props.productFetch();
+		
+			this.props.productFetch();
+		
 	}
    
 	 componentDidMount() {

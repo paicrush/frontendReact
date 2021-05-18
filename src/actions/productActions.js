@@ -27,7 +27,7 @@ export const productDelete = id =>{
 
 export const productFetch2 = id =>{
     return dispatch => {
-        axios.get("http://localhost:3001/product/" + id).then(response => {
+        axios.get("http://localhost:3001/search/" + id).then(response => {
         dispatch({type: PRODUCT_FETCH,payload:response.data});
 	    })
     }  
@@ -44,7 +44,7 @@ export const productCreate = values =>{
 
 export const productUpdate = (id,values) =>{
     return dispatch => {
-        axios.put("http://localhost:3001/product/" + id,values).then(response => {
+        axios.put("http://localhost:3001/products/" + id,values).then(response => {
             dispatch({type: PRODUCT_UPDATE,payload:response.data});
     } ) 
     }

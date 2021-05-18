@@ -186,7 +186,7 @@ class Order extends Component {
                     
                     <h2 className="title text-right">{this.state.show == false && (
                         <button type="button" class="btn btn-outline-success" onClick={this.showall}>แสดงออเดอร์ทั้งหมด</button>
-                    )}  ค้นหาด้วยวันที่ : <DatePicker selected={startdate} onSelect={this.selecthand} dateFormat="M/d/yyyy" onChange={this.handleChange}/></h2>               
+                    )}  ค้นหาด้วยวันที่ : <DatePicker selected={startdate} maxDate={startdate} onSelect={this.selecthand} dateFormat="M/d/yyyy" onChange={this.handleChange}/></h2>               
                         </div>
                 </div>
                     <div className="row" style={{margin: 1 + 'em'}}>

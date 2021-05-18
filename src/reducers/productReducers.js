@@ -7,9 +7,9 @@ export default function (state=[], action) {
         case PRODUCTS_SEARCH_FETCH :
             return action.payload;
         case PRODUCT_CREATE :
-            return {seaved:true,msg:"บันทึกสินค้าเรียบร้อย"}
+            return {saved:true,msg:"บันทึกสินค้าเรียบร้อย"}
         case PRODUCT_UPDATE :
-            return {...state,seaved:true,msg:"บันทึกสินค้าเรียบร้อย"}
+            return {...state,saved:true,msg:"บันทึกสินค้าเรียบร้อย"}
         default:
             return state;
     }
