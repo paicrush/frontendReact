@@ -62,13 +62,18 @@ class Monitor extends Component{
                 <div className="row">
                     <div className="col-md-9">
                         <div className="row" style={{marginBottom:10 +'px'}}>
-                            <div className="col-8">
+                        <div className="col-3">
+                            <h3>ค้นหารายการอาหาร :</h3>
+                            </div>
+                            <div className="col-4">
                                 <input className="form-control" type="text" name="search_item" placeholder="ป้อนชื่ออาหารที่ต้องการรับประทาน" onChange={this.props.setSearchValue}></input>
                             </div>
                             <div className="col-2">
                                 <button className="btn btn-outline-success my-2 my-sm-0 form-control" onClick={()=>this.props.confirmSearch()}>ค้นหา</button>
                             </div>
                         </div>
+                        
+                        <hr/>
                         <ProductList product={this.props.product} onAddOrder={this.addOrder} />
                     </div>
                     <div className="col-md-3">

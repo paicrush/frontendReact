@@ -45,7 +45,7 @@ class Product extends Component {
                  <div className="container-fluid ">
 					<div className="row">
 						<div className="col-6">
-							<h1>รายการสินค้า</h1>
+							<h1>รายการอาหาร</h1>
 						</div>
 						<div className="col-6">
 							<button className="btn btn-success title float-right" onClick={() => this.props.history.push('product/add')}><img style={style} src ="http://www.digithaigroup.com/wp-engine/wp-content/uploads/2016/10/pizzadaybkk.png" alt="not" />     เพิ่มสินค้าใหม่</button>
