@@ -18,7 +18,8 @@ class Order extends Component {
             today:0,
             yeserday:100,
             startdate: new Date(),
-            check : new Date()
+            check : new Date(),
+            show : true
 
         }
 	}
@@ -88,6 +89,7 @@ class Order extends Component {
       
       selecthand=date=>{
         this.setState({check : date });
+        this.setState({show : false });
       }
      
     showOrders() {
@@ -97,7 +99,7 @@ class Order extends Component {
                 height:50,
             }
             const ddd = new Date();
-            if (this.state.check.toLocaleDateString() == ddd.toLocaleDateString()) {
+            if (this.state.check.toLocaleDateString() == ddd.toLocaleDateString() && this.state.show == true) {
                 return (
                     <div key={order._id} className="col-md-3">
                         <div className="col-md-12 rounded" style={{backgroundColor:'#D5F5E3',margin:10 +'px',border:3+'px'+' solid #58D68D'}}>
