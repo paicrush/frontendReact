@@ -61,7 +61,15 @@ class Monitor extends Component{
                 </div>}
                 <div className="row">
                     <div className="col-md-9">
-                    <ProductList product={this.props.product} onAddOrder={this.addOrder} />
+                        <div className="row" style={{marginBottom:10 +'px'}}>
+                            <div className="col-8">
+                                <input className="form-control" type="text" name="search_item" placeholder="ป้อนชื่ออาหารที่ต้องการรับประทาน" onChange={this.props.setSearchValue}></input>
+                            </div>
+                            <div className="col-2">
+                                <button className="btn btn-outline-success my-2 my-sm-0 form-control" onClick={()=>this.props.confirmSearch()}>ค้นหา</button>
+                            </div>
+                        </div>
+                        <ProductList product={this.props.product} onAddOrder={this.addOrder} />
                     </div>
                     <div className="col-md-3">
                         <Calculator totalPrice={this.state.totalPrice} orders={this.state.orders}  delOrder={this.delOrder}  onConfirmOrder={this.confirmOrder}  onCancelOrder={this.cancelOrder}/>

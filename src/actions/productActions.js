@@ -1,5 +1,5 @@
 import axios from "axios";
-import {PRODUCTS_FETCH,PRODUCT_CREATE,PRODUCT_FETCH,PRODUCT_UPDATE} from "./type";
+import {PRODUCTS_FETCH,PRODUCT_CREATE,PRODUCT_FETCH,PRODUCT_UPDATE,PRODUCTS_SEARCH_FETCH } from "./type";
 
 export const productFetch =() =>{
     return dispatch => {
@@ -8,6 +8,15 @@ export const productFetch =() =>{
 	    })
     }  
 }
+
+export const productSearchFetch = (search_item) =>{
+    return dispatch => {
+        axios.get("http://localhost:3001/product/"+search_item).then(response => {
+        dispatch({type: PRODUCTS_SEARCH_FETCH,payload:response.data});
+	    })
+    }  
+}
+
 export const productDelete = id =>{
     return dispatch => {
         axios.delete("http://localhost:3001/product/" + id).then(response => {
